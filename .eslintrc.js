@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -17,7 +18,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -26,6 +27,7 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'react/prop-types': 0,
   },
   overrides: [
     {
