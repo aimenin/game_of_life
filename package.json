@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npx webpack --mode production",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/",
-    "test": "npx jest"
+    "test": "npx jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -30,6 +32,12 @@
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addons": "^6.3.6",
+    "@storybook/builder-webpack5": "^6.3.6",
+    "@storybook/manager-webpack5": "^6.3.6",
+    "@storybook/react": "^6.3.6",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.15",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
