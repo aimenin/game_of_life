@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styled from '@emotion/styled';
 import { Coords, CellType } from '@/helpers/Field';
 
@@ -10,11 +10,22 @@ export interface CellProps {
 }
 
 export const CellStyles = styled.div`
-  width: 10px;
-  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   background-color: red;
+  border: 1px solid black;
+  cursor: pointer;
 `;
 
 export const Cell: FC<CellProps> = ({ coords }) => {
-  return <CellStyles>{coords}</CellStyles>;
+  const [click, setClick] = useState(false);
+
+  return (
+    <CellStyles onClick={() => setClick(!click)}>
+      {click && `${coords[0]}:${coords[1]}`}
+    </CellStyles>
+  );
 };

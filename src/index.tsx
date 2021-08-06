@@ -22,7 +22,7 @@ const staticField: Field = [
 
 ReactDOM.render(
   <>
-    <h1>Hello world</h1>
+    <h1>Game of life</h1>
     <Grid>{staticField}</Grid>
   </>,
   document.getElementById('root')
