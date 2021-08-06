@@ -7,5 +7,7 @@ module.exports = {
   testEnvironment: 'node',
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+    "^.+\\.[tj]sx?$": "babel-jest",
+    "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx",
   },
 };
