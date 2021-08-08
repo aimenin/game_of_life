@@ -24,7 +24,7 @@ export const Cell: FC<CellProps> = ({ coords }) => {
   const [click, setClick] = useState(false);
 
   return (
-    <CellStyles onClick={() => setClick(!click)} role="cell">
+    <CellStyles onClick={() => setClick(!click)}>
       {click && `${coords[0]}:${coords[1]}`}
     </CellStyles>
   );
