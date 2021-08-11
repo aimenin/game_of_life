@@ -10,8 +10,7 @@
     "test": "npx jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=18dc472e5863",
-    "prepare": "husky install"
+    "chromatic": "npx chromatic --project-token=18dc472e5863"
   },
   "husky": {
     "hooks": {
