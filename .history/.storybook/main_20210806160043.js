@@ -10,9 +10,6 @@ module.exports = {
     "@storybook/addon-actions",
     "@storybook/addon-docs",
     "@storybook/addon-controls",
-    "storybook-addon-outline",
-    "@storybook/addon-measure",
-    "@storybook/addon-viewport",
   ],
   "core": {
     "builder": "webpack5",

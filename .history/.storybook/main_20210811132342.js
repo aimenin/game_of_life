@@ -11,8 +11,7 @@ module.exports = {
     "@storybook/addon-docs",
     "@storybook/addon-controls",
     "storybook-addon-outline",
-    "@storybook/addon-measure",
-    "@storybook/addon-viewport",
+    "storybook-addon-code-preview",
   ],
   "core": {
     "builder": "webpack5",
