@@ -38,10 +38,4 @@ jobs:
       # Run build
       - name: Build
         run: npm run build
-
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         
