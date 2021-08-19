@@ -4,9 +4,6 @@ import { Coords } from '@/helpers/Field';
 
 export interface CellProps {
   coords: Coords;
-  /**
-   * Cell coordinates
-   */
 }
 
 export const CellStyles = styled.div`
@@ -21,11 +18,11 @@ export const CellStyles = styled.div`
 `;
 
 export const Cell: FC<CellProps> = ({ coords }) => {
-  const [click, setClick] = useState(false);
+  const [showCoord, setShowCoord] = useState(false);
 
   return (
-    <CellStyles onClick={() => setClick(!click)} role="cell">
-      {click && `${coords[0]}:${coords[1]}`}
+    <CellStyles onClick={() => setShowCoord(!showCoord)} role="cell">
+      {showCoord && `${coords[0]}:${coords[1]}`}
     </CellStyles>
   );
 };
