@@ -8,9 +8,8 @@ export default {
   component: Grid,
 } as Meta;
 
-const Template: Story<GridProps> = (args) => <Grid {...args} />;
+export const GridExample: Story<GridProps> = (args) => <Grid {...args} />;
 
-export const GridExample = Template.bind({});
 GridExample.args = {
   children: [
     [9, 2, 9, 1, 0, 0, 1, 1, 1, 1, 1, 1],

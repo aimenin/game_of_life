@@ -11,9 +11,8 @@ export default {
   },
 } as Meta;
 
-const Template: Story<CellProps> = (args) => <Cell {...args} />;
+export const CellAverage: Story<CellProps> = (args) => <Cell {...args} />;
 
-export const CellAverage = Template.bind({});
 CellAverage.args = {
   coords: [10, 5],
 };
