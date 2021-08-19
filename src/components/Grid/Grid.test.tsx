@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import { Coords, Field } from '@/helpers/Field';
+import { Field } from '@/helpers/Field';
 
 import { Grid } from './Grid';
 
@@ -23,11 +23,6 @@ const staticField: Field = [
 ];
 
 describe('Grid component testing', () => {
-  test('render Grid component', () => {
-    render(<Grid>{staticField}</Grid>);
-
-    screen.debug();
-  });
   test('find cell', () => {
     const testMessage = '0:1';
 

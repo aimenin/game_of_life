@@ -10,11 +10,6 @@ import { Cell } from './Cell';
 describe('Cell component check', () => {
   const coords: Coords = [1, 2];
   const testMessage = '1:2';
-  test('renders Cell Component', () => {
-    render(<Cell coords={coords} />);
-
-    screen.debug();
-  });
   test('rendering Cell component with empty', () => {
     render(<Cell coords={coords} />);
 
