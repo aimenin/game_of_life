@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styled from '@emotion/styled';
-import { Coords, CellType } from '@/helpers/Field';
+import { Coords } from '@/helpers/Field';
 
 export interface CellProps {
   coords: Coords;
