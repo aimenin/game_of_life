@@ -1,9 +1,11 @@
+import '@testing-library/jest-dom';
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render, screen, fireEvent } from '@testing-library/react';
 
-import { Grid } from '@/components/Grid/Grid';
+import { Field } from '@/helpers/Field';
 
-import { Field } from './helpers/Field';
+import { Grid } from './Grid';
 
 const staticField: Field = [
   [9, 2, 9, 1, 0, 0, 1, 1, 1, 1, 1, 1],
@@ -20,10 +22,14 @@ const staticField: Field = [
   [0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 9, 1],
 ];
 
-ReactDOM.render(
-  <>
-    <h1>Game of life</h1>
-    <Grid>{staticField}</Grid>
-  </>,
-  document.getElementById('root')
-);
+describe('Grid component testing', () => {
+  test('find cell', () => {
+    const testMessage = '0:1';
+
+    render(<Grid>{staticField}</Grid>);
+
+    fireEvent.click(screen.queryAllByRole('cell')[1]);
+
+    expect(screen.queryByText(testMessage)).toBeInTheDocument();
+  });
+});

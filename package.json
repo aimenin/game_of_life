@@ -4,15 +4,14 @@
   "description": "game of life react realization",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack --mode production",
-    "lint": "npx eslint --ext .js,.jsx,.ts,.tsx --fix src/",
-    "test": "npx jest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test && npm run lint",
-      "pre-push": "npm test && npm run lint"
-    }
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode=development",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix src/",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic --project-token=18dc472e5863",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -28,19 +27,39 @@
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-controls": "^6.3.6",
+    "@storybook/addon-docs": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addon-measure": "^6.4.0-alpha.27",
+    "@storybook/addon-viewport": "^6.3.7",
+    "@storybook/addons": "^6.3.6",
+    "@storybook/builder-webpack5": "^6.3.6",
+    "@storybook/manager-webpack5": "^6.3.6",
+    "@storybook/react": "^6.3.6",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.10.0-canary.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
+    "storybook-addon-code-preview": "0.0.9",
+    "storybook-addon-outline": "^1.4.1",
     "style-loader": "^3.2.1",
     "typescript": "^4.3.5",
     "url-loader": "^4.1.1",
@@ -49,6 +68,13 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   }
 }
